@@ -513,7 +513,9 @@ function App() {
       triggerConfetti()
     }
 
-    showToast(message)
+    if (message) {
+      showToast(message)
+    }
 
     if (closeMenu) {
       setMobileOpen(false)
@@ -746,9 +748,7 @@ function App() {
           >
             <button
               type="button"
-              onClick={() =>
-                handleJoinClick('🌟 Selamat datang di Muda Berkarya!', true, false)
-              }
+              onClick={() => handleJoinClick('', true, false)}
               className="btn-fun animate-gradient flex items-center gap-2 rounded-full bg-gradient-to-r from-grape-500 via-bubblegum-500 to-sunny-500 px-8 py-4 text-base font-semibold text-white shadow-xl shadow-grape-500/30 transition-all hover:scale-105 hover:shadow-2xl hover:shadow-grape-500/40"
             >
               Mulai Perjalananmu
@@ -1083,14 +1083,7 @@ function App() {
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <button
               type="button"
-              onClick={() =>
-                handleJoinClick(
-                  '🎊 Yeay! Selamat bergabung dengan Muda Berkarya!',
-                  true,
-                  false,
-                  'cta',
-                )
-              }
+              onClick={() => handleJoinClick('', true, false, 'cta')}
               className="btn-fun flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-bold text-grape-700 shadow-xl transition-all hover:scale-105 hover:shadow-2xl"
             >
               Gabung Sekarang - Gratis!
