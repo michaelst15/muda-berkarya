@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import logoMudaBerkarya from './logo-muda-berkarya.png'
 
 const imageUrl = (prompt, imageSize = 'landscape_4_3') =>
   `https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=${encodeURIComponent(
@@ -532,9 +533,11 @@ function App() {
       >
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
           <a href="#" className="group flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-grape-500 to-bubblegum-500 text-sm font-bold text-white transition-transform group-hover:scale-110">
-              MB
-            </div>
+            <img
+              src={logoMudaBerkarya}
+              alt="Logo Muda Berkarya"
+              className="h-10 w-10 rounded-xl object-cover shadow-sm transition-transform group-hover:scale-110"
+            />
             <span className="text-lg font-bold text-grape-900">
               Muda<span className="text-bubblegum-500">Berkarya</span>
             </span>
@@ -1166,9 +1169,11 @@ function App() {
           <div className="mb-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
             <div className="lg:col-span-2">
               <div className="mb-4 flex items-center gap-2">
-                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-grape-400 to-bubblegum-500 text-sm font-bold text-white">
-                  MB
-                </div>
+                <img
+                  src={logoMudaBerkarya}
+                  alt="Logo Muda Berkarya"
+                  className="h-10 w-10 rounded-xl object-cover shadow-sm"
+                />
                 <span className="text-lg font-bold">
                   Muda<span className="text-bubblegum-400">Berkarya</span>
                 </span>
